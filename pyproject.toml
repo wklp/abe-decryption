@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wklp-abe-grab"
+version = "0.1.0"
+description = "Chromium credential extraction via OSCrypt App-Bound hwbp (Chrome, Edge, Opera, Opera GX)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "wklp" }]
+dependencies = [
+    "pycryptodome>=3.20",
+    "pywin32>=306",
+]
+
+[project.scripts]
+wklp-abe-grab = "wklp_abe_grab.cli:main"
+
+[tool.setuptools]
+packages = ["wklp_abe_grab"]
